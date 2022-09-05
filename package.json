@@ -1,0 +1,15 @@
+{
+  "name": "pug-learning",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Arthur Buravljov",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "pug-cli": "^1.0.0-alpha6"
+  },
+  "scripts": {
+    "pug": "npx pug ./src/* --pretty -o ./public/",
+    "pug-watch": "npx pug ./src/* -w --pretty -o ./public/"
+  }
+}

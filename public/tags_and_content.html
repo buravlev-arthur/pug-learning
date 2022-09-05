@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <meta chartset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <!-- Строчные элементы расположатся в строку в итоговом Html--><span>Первый спан</span><span>Второй спан</span>
+    <!-- Inline-стиль-->
+    <p>Пишем сразу после тека</p>
+    <!-- Pipe-стиль-->
+    <p>
+      Можно писать
+      В несколько строк
+    </p>
+    <!-- Блочный стиль-->
+    <p>
+      После тега ставится точка. 
+      И можно писать спокойно в несколько строк
+      без дополнительных знаков
+      
+    </p>
+    <!-- Вложенность-->
+    <section> 
+      <p>Вложенный в section абзац</p>
+    </section>
+    <!-- Атрибуты-->
+    <section class="sections" id="section_id_2"></section>
+    <section class="sections" id="section_id"></section>
+    <!-- Указывая сразу класс, мы создаём div-->
+    <div class="items"> 
+      <div class="item">Товар 1</div>
+      <div class="item">Товар 2</div>
+    </div>
+    <!-- Интерполяция тегов-->
+    <p>Внутрь текста параграфа, можно поместить <strong>любой тег</strong>,
+      а можно и с помощью <i>обычного тега</i>
+      
+    </p>
+    <!-- Пробельные символы (пустые pipe, html-мнемоники)-->
+    <div>
+      Нужно вставить тег
+      
+      <button>Например кнопку</button>
+      но сохранить перед ней и после пробелы&nbsp;
+      <button>Или ещё одну кнопку</button>&nbsp;а потом снова текст
+    </div>
+  </body>
+</html>

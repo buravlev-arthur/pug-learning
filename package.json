@@ -6,10 +6,11 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "jstransformer-markdown-it": "^3.0.0",
     "pug-cli": "^1.0.0-alpha6"
   },
   "scripts": {
-    "pug": "npx pug ./src/* --pretty -o ./public/",
-    "pug-watch": "npx pug ./src/* -w --pretty -o ./public/"
+    "pug": "npx pug ./src --pretty -o ./public",
+    "pug-watch": "npx pug ./src -w --pretty -o ./public"
   }
 }

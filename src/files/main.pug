@@ -1,0 +1,31 @@
+//- index.pug
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(rel='icon' type='image/x-icon' href='favicon.ico')
+
+    title Hexlet
+
+    style
+      include styles.css
+
+    link(rel='stylesheet' href='./styles/app.css')
+  body
+    //- Подключение шапки сайта
+    include header.pug
+
+    main
+      h1 Markdown преобразованный в html
+
+      // Подключаем модуль jstransformer-markdown-it и передаём внутрь файл
+      include:markdown-it main.md
+
+      // Подключаем модуль jstransformer-markdown-it и ниже преобразуемый текст
+      :markdown-it
+        ## Как проходит обучени
+        Вы выбираете профессию, мы подбираем для вас индивидуального наставника. Это действующий программист с опытом преподавания. Обучение программированию в рамках профессиобъединяется в четыре модуля. Каждый модуль состоит из тематических курсов и практического проекта.
+
+    //- Подключение футера сайта
+    include footer.pug

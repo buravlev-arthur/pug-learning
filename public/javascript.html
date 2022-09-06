@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <!-- Небуферированный код-->
+    <div class="container">
+      <!-- Вывод JS-переменной-->
+      <h5>Текст в переменной срокового типа</h5>
+      <div class="calculation">1 plus 2 = 3</div>
+      <div class="result">
+        <!-- теги будут экранированы-->&lt;p&gt;Текст в обзаце&lt;/p&gt;
+        <!-- c помощью !{} теги экранироваться не будут--><p>Текст в обзаце</p>
+      </div>
+    </div>
+    <!-- Буферированный код-->
+    <div id="buffering-code">
+      <p>4</p>
+      <!-- html будет экранирован-->
+      <p>&lt;span&gt;Hello&lt;/span&gt;, I am was shielded</p>
+      <!-- html не будет экранирован-->
+      <p><span>Yeah! I am not shielded</span></p>
+    </div>
+  </body>
+</html>

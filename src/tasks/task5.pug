@@ -1,0 +1,31 @@
+-
+  const icons = {
+    free: [
+      {
+        name: 'robot',
+        url: './icons/robot.svg'
+      },
+      {
+        name: 'hexlet',
+        url: './icons/hexlet.svg'
+      }
+    ],
+    premium: [
+      {
+        name: 'cat',
+        url: './icons/premium/cat.svg'
+      },
+      {
+        name: 'dog',
+        url: './icons/premium/dog.svg'
+      }
+    ]
+  };
+
+each imgs, imgsType in icons
+  h2= imgsType
+  ul
+    each img in imgs
+      li
+        // Использование переменных в атрибутах
+        a(href=img.url) #{img.name}

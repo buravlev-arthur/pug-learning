@@ -1,0 +1,13 @@
+mixin buttonOrder(title = 'Кнопка')
+  button.btn.btn-order= title
+
+mixin article(title = 'Заголовок статьи', author = 'Автор статьи')
+
+  h2= title
+  // В block попадает то, что мы передали непосредственно внутрь миксина
+  .article-body
+    if block
+      block
+    else
+      p Нет данных для отображения тела статьи
+  .author= author

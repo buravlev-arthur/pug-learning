@@ -1,0 +1,41 @@
+-
+  const users = {
+    admin: [
+      {
+        name: 'Кодовёнок',
+        surname: 'Хекслетович',
+      },
+    ],
+    moderator: [
+      {
+        name: 'Король',
+        surname: 'Вёрстки',
+      },
+      {
+        name: 'Алексей',
+        surname: 'Примадонин',
+      },
+    ],
+  }
+
+  let count = 0
+
+doctype html
+html
+  head
+    title Циклы
+  body
+    section.container
+      // В status: admin, moderator; В people - сам массив с пользователями
+      each people, status in users
+        h2= status
+        ul
+          each user in people
+            li= `${user.name} ${user.surname}`
+
+      ul.while-cycle
+        // Цикл While
+        while count < 5
+          li= `Current number is ${count}`
+          - count += 1
+

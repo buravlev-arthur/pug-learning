@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    title JavaScript
+    meta(charset='utf-8')
+  body
+    // Небуферированный код
+    - const title = 'Текст в переменной срокового типа' // JavaScript код
+    - const one = 1
+    - const two = 2
+    - const action = 'plus'
+    - const html = '<p>Текст в обзаце</p>'
+
+    .container
+      // Вывод JS-переменной
+      h5 #{title}
+      .calculation
+        | #{one} #{action} #{two} = #{one + two}
+      .result
+        // теги будут экранированы
+        | #{html}
+        // c помощью !{} теги экранироваться не будут
+        | !{html}
+
+    // Буферированный код
+    #buffering-code
+      p= 2 + 2
+      // html будет экранирован
+      p= '<span>Hello</span>, I am was shielded'
+      // html не будет экранирован
+      p!= '<span>Yeah! I am not shielded</span>'

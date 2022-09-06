@@ -1,0 +1,29 @@
+- const isLogin = false;
+
+// Многострочный JS-код
+-
+  const user = {
+    name: null,
+    surname: 'Adams',
+    login: 'john-adams',
+  }
+
+doctype html
+html
+  head
+    title Условия
+  body
+    .main
+      if isLogin && user.name && user.surname
+        section.profile.
+          #{user.name} #{user.surname}
+      else if isLogin && user.login
+        section.profile.
+          #{user.login}
+      else
+        section.registration
+          a(href='/') регистрация
+
+    .section
+      unless isLogin
+        p Доступ предоставляется только зарегестрированным пользователям
